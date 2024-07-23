@@ -22,7 +22,7 @@ namespace Calculator
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
         }
-
+        // for every digit clicked from 0-9
         private void button_Click(object sender, EventArgs e)
         {
             if ((textBoxDisplay.Text == "0") || (operationPerformed) || resultDisplayed)
@@ -33,14 +33,14 @@ namespace Calculator
             Button button = (Button)sender;
             textBoxDisplay.Text += button.Text;
         }
-
+        //For Every operator clicked
         private void operator_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             // Append the operator to the display
             textBoxDisplay.Text += button.Text;
         }
-
+        //for dot
         private void dot(object sender, EventArgs e)
         {
             operationPerformed = false;
@@ -48,7 +48,7 @@ namespace Calculator
             // Append the decimal point to the display
             textBoxDisplay.Text += button.Text;
         }
-
+        //to perform every operations after equal is clicked
         private void buttonEquals_Click(object sender, EventArgs e)
         {
             try
@@ -64,13 +64,13 @@ namespace Calculator
                 resultDisplayed = false;
             }
         }
-
+        //fro All Clear button
         private void buttonClear_Click(object sender, EventArgs e)
         {
             textBoxDisplay.Text = "0";
             resultDisplayed = false; // Reset resultDisplayed
         }
-
+        //for clear button
         private void buttonBackspace_Click(object sender, EventArgs e)
         {
             if (resultDisplayed)
